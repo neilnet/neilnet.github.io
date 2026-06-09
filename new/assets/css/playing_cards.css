@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: flex-start;
     padding-top: 20vh;
+    padding-top: 20dvh;
 }
 
 .text-panel p {
@@ -43,6 +44,7 @@
     left: 0;
     right: 0;
     bottom: 10vh;
+    bottom: 10dvh;
     text-align: center;
     font-size: 1.2rem;
     color: #333333;
@@ -58,6 +60,7 @@
 .next {
     position: absolute;
     bottom: 30vh;
+    bottom: 30dvh;
     display: flex;
     align-items: center;
     gap: 0.75rem;

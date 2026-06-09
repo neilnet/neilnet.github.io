@@ -13,9 +13,11 @@ window.addEventListener("resize", setEndSpacerWidth);
 
 strip.addEventListener("scroll", () => {
     const rect = trigger.getBoundingClientRect();
-    const screenMiddle = window.innerWidth / 2;
 
-    if (rect.left <= screenMiddle) {
+    const stripRect = strip.getBoundingClientRect();
+    const stripCenter = stripRect.left + stripRect.width / 2;
+
+    if (rect.left <= stripCenter) {
         caption.style.opacity = "";
         caption.classList.add("visible");
     } else {

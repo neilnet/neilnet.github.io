@@ -1,5 +1,6 @@
 .gallery {
 	width: min(80%, calc(100vh - 4rem));
+	width: min(80%, calc(100dvh - 4rem));
 	aspect-ratio: 1 / 1;
 	margin: 2rem auto 0 auto;
 	display: grid;

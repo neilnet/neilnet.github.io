@@ -71,6 +71,10 @@
     gap: 1rem;
 }
 
+.detail-image {
+    max-height: 85%;
+}
+
 .image-object.caption-below img {
     max-height: calc(100% - 4rem);
     width: auto;
