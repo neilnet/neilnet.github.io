@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    background-color: #fbf7ef;
+
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    min-height: 100vh;
+}
+
+/***** sidebar *****/
+
+.sidebar {
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 1%;
+    height: 98%;
+    width: 1px;
+    background-color: #d8cdbb;
+}
+
+.sidebar h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.sidebar li {
+    margin: 0.5rem 0;
+}
+
+.sidebar li.bio {
+    margin: 0.5rem 0 2rem 0;
+}
+
+.sidebar li a { 
+    color: #333333;
+    margin-left: 1rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    color: #000000;
+}
+
+.sidebar a:hover {
+    opacity: 0.5;
+}
+
+/***** main *****/
+
+.content {
+    position: relative;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.stage {
+    position: relative;
+    height: 100vh;
+}
+
+.strip {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.strip::-webkit-scrollbar {
+    display: none;
+}
+
+

@@ -1,0 +1,16 @@
+.text {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+
+.text p {
+    max-width: 45rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.text p + p {
+    margin-top: 1.5rem;
+}

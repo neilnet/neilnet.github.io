@@ -1,0 +1,47 @@
+.gallery {
+	width: min(80%, calc(100vh - 4rem));
+	aspect-ratio: 1 / 1;
+	margin: 2rem auto 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	gap: 2rem;
+}
+
+.cell {
+	position: relative;
+	aspect-ratio: 1 / 1;
+	display: grid;
+	place-items: center;
+	text-decoration: none;
+}
+
+.cell img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: block;
+}
+
+.cell:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(251, 247, 239, 0.75);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.overlay .title {
+	color: black;
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-align: center;
+}
+

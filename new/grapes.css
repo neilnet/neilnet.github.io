@@ -1,0 +1,74 @@
+.strip {
+    padding-top: 1rem;
+    height: 95%;
+    visibility: hidden;
+}
+
+.scroll-hint {
+    position: absolute;
+    right: 1rem;
+    top: calc(1rem + 95%);
+    transform: translateY(-100%);
+
+    font-size: 1rem;
+    color: #333333;
+    pointer-events: none;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-hint.hidden {
+    opacity: 0;
+}
+
+.image-panel {
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-object {
+    position: relative;
+    display: inline-block;
+}
+
+.image-object img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    left: calc(100% + 2rem);
+    bottom: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333333;
+    min-width: 12rem;
+}
+
+.fixed-spacer {
+    width: 30%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.first-spacer {
+    width: var(--first-spacer-width, 0px);
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.end-spacer {
+    width: var(--end-spacer-width, 0px);
+    height: 100%;
+    flex-shrink: 0;
+}
+
+

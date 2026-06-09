@@ -1,0 +1,94 @@
+.strip {
+    height: 75%;
+    background: #000000;
+}
+
+.scroll-hint {
+    position: absolute;
+    right: 1rem;
+    top: calc(25% - 1rem);
+
+    transform: translateY(-100%);
+
+    font-size: 1rem;
+    color: #333333;
+    pointer-events: none;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-hint.hidden {
+    opacity: 0;
+}
+
+.text-panel {
+    width: 90%;
+    height: 25%;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.text-panel p {
+    width: 100%;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.text-panel p + p {
+    margin-top: 3rem;
+}
+
+.image-panel {
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-object {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-object img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 90%;
+    display: block;
+}
+
+.fixed-spacer {
+    width: 15%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.caption {
+    position: absolute;
+    left: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.caption.visible {
+    opacity: 1;
+}
