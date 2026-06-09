@@ -94,5 +94,62 @@
     flex-shrink: 0;
 }
 
+@media (max-width: 800px) {
+    .strip {
+        height: 100%;
+        padding-top: 0;
+        scroll-snap-type: x mandatory;
+    }
 
+    .text-panel {
+        width: 100%;
+        padding: 1.5rem;
+        padding-top: 3rem;
+        justify-content: flex-start;
+        scroll-snap-align: center;
+    }
+
+    .text-panel p {
+        width: 100%;
+        max-width: 32rem;
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .next {
+        bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    .next img {
+        height: 2rem;
+    }
+
+    .image-panel {
+        width: 100%;
+        padding: 1rem;
+        justify-content: center;
+        scroll-snap-align: center;
+    }
+
+    .image-panel img {
+        max-width: 100%;
+        max-height: 90%;
+    }
+
+    .caption {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+    .fixed-spacer,
+    .first-spacer,
+    .end-spacer {
+        width: 1rem;
+        min-width: 1rem;
+    }
+}
 

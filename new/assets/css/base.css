@@ -100,4 +100,60 @@ body {
     display: none;
 }
 
+@media (max-width: 800px) {
+    body {
+        display: block;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid #d8cdbb;
+    }
+
+    .sidebar::after {
+        display: none;
+    }
+
+    .sidebar h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem 1rem;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .sidebar li,
+    .sidebar li.bio {
+        margin: 0;
+    }
+
+    .sidebar li a {
+        margin-left: 0;
+    }
+
+    .content {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .stage {
+        height: calc(100vh - 7.25rem);
+        height: calc(100dvh - 7.25rem);
+    }
+
+    .strip {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 

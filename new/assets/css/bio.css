@@ -14,3 +14,21 @@
 .text p + p {
     margin-top: 1.5rem;
 }
+
+@media (max-width: 800px) {
+    .text {
+        width: auto;
+        margin: 0;
+        padding: 2rem 1.25rem 3rem 1.25rem;
+    }
+
+    .text p {
+        max-width: none;
+        font-size: 1.1rem;
+        line-height: 1.55;
+    }
+
+    .text p + p {
+        margin-top: 1.25rem;
+    }
+}

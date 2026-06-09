@@ -46,3 +46,40 @@
 	text-align: center;
 }
 
+@media (max-width: 800px) {
+    .gallery {
+        width: auto;
+        aspect-ratio: auto;
+        margin: 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1.5rem;
+    }
+
+    .cell {
+        aspect-ratio: auto;
+        display: block;
+    }
+
+    .cell img {
+        width: 100%;
+        height: auto;
+        max-height: 65vh;
+        object-fit: contain;
+    }
+
+    .overlay {
+        position: static;
+        opacity: 1;
+        background: transparent;
+        padding-top: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .overlay .title {
+        font-size: 1.1rem;
+    }
+}
+

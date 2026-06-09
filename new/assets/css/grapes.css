@@ -72,3 +72,56 @@
 }
 
 
+@media (max-width: 800px) {
+    .strip {
+        height: 100%;
+        padding-top: 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .image-panel {
+        width: 100%;
+        padding: 1rem;
+        scroll-snap-align: center;
+    }
+
+    .image-object {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-object img {
+        max-width: 100%;
+        max-height: calc(100% - 4.5rem);
+        width: auto;
+        height: auto;
+    }
+
+    .image-caption {
+        position: static;
+        min-width: 0;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    .fixed-spacer,
+    .first-spacer,
+    .end-spacer {
+        width: 1rem;
+        min-width: 1rem;
+    }
+
+    .scroll-hint {
+        right: 1rem;
+        bottom: 1rem;
+        top: auto;
+        transform: none;
+        font-size: 0.9rem;
+    }
+}

@@ -92,3 +92,60 @@
 .caption.visible {
     opacity: 1;
 }
+
+@media (max-width: 800px) {
+    .stage {
+        height: calc(100vh - 7.25rem);
+        height: calc(100dvh - 7.25rem);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-panel {
+        width: 100%;
+        height: auto;
+        min-height: 35%;
+        padding: 1.25rem;
+    }
+
+    .text-panel p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .strip {
+        height: 65%;
+        scroll-snap-type: x mandatory;
+    }
+
+    .image-panel {
+        width: 100%;
+        padding: 1rem;
+        scroll-snap-align: center;
+    }
+
+    .image-object {
+        width: 100%;
+    }
+
+    .image-object img {
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .fixed-spacer {
+        width: 1rem;
+        min-width: 1rem;
+    }
+
+    .sidebar .caption {
+        display: none;
+    }
+
+    .scroll-hint {
+        right: 1rem;
+        top: calc(35% - 1rem);
+        font-size: 0.9rem;
+    }
+}
