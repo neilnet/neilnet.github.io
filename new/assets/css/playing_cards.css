@@ -104,7 +104,7 @@
     .text-panel {
         width: 100%;
         padding: 3rem;
-        padding-top: 2rem;
+        padding-top: 4rem;
         justify-content: flex-start;
         scroll-snap-align: center;
     }
@@ -128,13 +128,14 @@
     .image-panel {
         width: 100%;
         padding: 1rem;
+        padding-bottom: 5rem;
         justify-content: center;
         scroll-snap-align: center;
     }
 
     .image-panel img {
         max-width: 100%;
-        max-height: 90%;
+        max-height: 100%;
     }
 
     .caption {

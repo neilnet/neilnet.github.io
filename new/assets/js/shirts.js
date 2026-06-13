@@ -110,6 +110,24 @@ function updateCaption() {
 }
 
 function updateScrollHint() {
+    const isMobile = window.matchMedia("(max-width: 800px)").matches;
+
+    if (isMobile) {
+        const mobileTextPanel = document.querySelector(".mobile-text-panel");
+
+        if (!mobileTextPanel) return;
+
+        const pastTextPanel = strip.scrollLeft > mobileTextPanel.offsetWidth / 2;
+
+        if (pastTextPanel) {
+            scrollHint.classList.add("hidden");
+        } else {
+            scrollHint.classList.remove("hidden");
+        }
+
+        return;
+    }
+
     const atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
 
     if (atEnd) {
