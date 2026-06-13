@@ -15,6 +15,25 @@ function setStripSpacing() {
 }
 
 function updateScrollHint() {
+    const isMobile = window.matchMedia("(max-width: 800px)").matches;
+
+    if (isMobile) {
+        const firstImagePanel = document.querySelector(".image-panel");
+
+        if (!firstImagePanel) return;
+
+        const stillOnFirstPanel =
+            strip.scrollLeft < firstImagePanel.offsetWidth / 2;
+
+        if (stillOnFirstPanel) {
+            scrollHint.classList.remove("hidden");
+        } else {
+            scrollHint.classList.add("hidden");
+        }
+
+        return;
+    }
+
     const hasScrolled = strip.scrollLeft > 10;
     const atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 2;
 

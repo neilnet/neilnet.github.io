@@ -117,12 +117,16 @@ function updateScrollHint() {
 
         if (!mobileTextPanel) return;
 
-        const pastTextPanel = strip.scrollLeft > mobileTextPanel.offsetWidth / 2;
+        const textScrolledToBottom =
+            mobileTextPanel.scrollTop + mobileTextPanel.clientHeight >= mobileTextPanel.scrollHeight - 2;
 
-        if (pastTextPanel) {
-            scrollHint.classList.add("hidden");
-        } else {
+        const stillOnTextPanel =
+            strip.scrollLeft < mobileTextPanel.offsetWidth / 2;
+
+        if (textScrolledToBottom && stillOnTextPanel) {
             scrollHint.classList.remove("hidden");
+        } else {
+            scrollHint.classList.add("hidden");
         }
 
         return;
@@ -135,6 +139,12 @@ function updateScrollHint() {
     } else {
         scrollHint.classList.remove("hidden");
     }
+}
+
+const mobileTextPanel = document.querySelector(".mobile-text-panel");
+
+if (mobileTextPanel) {
+    mobileTextPanel.addEventListener("scroll", updateScrollHint);
 }
 
 textPanel.addEventListener("wheel", (event) => {
