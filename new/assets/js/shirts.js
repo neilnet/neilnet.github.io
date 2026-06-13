@@ -66,6 +66,16 @@ const captions = {
     `
 };
 
+document.querySelectorAll(".image-object").forEach((imageObject) => {
+    const img = imageObject.querySelector("img");
+    const captionId = img?.dataset.captionId;
+    const imageCaption = imageObject.querySelector(".image-caption");
+
+    if (!captionId || !imageCaption) return;
+
+    imageCaption.innerHTML = captions[captionId] || "";
+});
+
 const strip = document.querySelector(".strip");
 const sidebarCaption = document.querySelector(".caption");
 const images = document.querySelectorAll(".strip img");

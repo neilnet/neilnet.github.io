@@ -7,9 +7,6 @@ function setStripSpacing() {
     const firstWidth = Math.max(0, (strip.clientWidth - images[0].getBoundingClientRect().width) / 2);
     strip.style.setProperty("--first-spacer-width", `${firstWidth}px`);
 
-    const secondWidth = strip.clientWidth - images[0].getBoundingClientRect().width - firstWidth;
-    strip.style.setProperty("--second-spacer-width", `${secondWidth}px`);
-
     const endWidth = Math.max(0, (strip.clientWidth - images[images.length - 1].getBoundingClientRect().width) / 2);
     strip.style.setProperty("--end-spacer-width", `${endWidth}px`);    
 }

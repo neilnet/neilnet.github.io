@@ -47,6 +47,10 @@
     margin-top: 3rem;
 }
 
+.mobile-text-panel {
+    display: none;
+}
+
 .image-panel {
     height: 100%;
     flex-shrink: 0;
@@ -69,6 +73,10 @@
     width: auto;
     height: 90%;
     display: block;
+}
+
+.image-caption {
+    display: none;
 }
 
 .fixed-spacer {
@@ -97,41 +105,76 @@
     .stage {
         height: calc(100vh - 7.25rem);
         height: calc(100dvh - 7.25rem);
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
-    .text-panel {
-        width: 100%;
-        height: auto;
-        min-height: 35%;
-        padding: 1.25rem;
-    }
-
-    .text-panel p {
-        font-size: 1.05rem;
-        line-height: 1.5;
+    .stage > .text-panel {
+        display: none;
     }
 
     .strip {
-        height: 65%;
+        height: 100%;
         scroll-snap-type: x mandatory;
+    }
+
+
+    .opening-spacer {
+        display: none;
+    }
+
+    .mobile-text-panel {
+        display: flex;
+        flex-direction: column;        
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        padding: 4rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        scroll-snap-align: center;
+
+        background: #fbf7ef;
+        color: #333333;
+    }
+
+    .mobile-text-panel p {
+        width: 80%;
+        max-width: 32rem;
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.55;
     }
 
     .image-panel {
         width: 100%;
+        height: 100%;
         padding: 1rem;
         scroll-snap-align: center;
     }
 
     .image-object {
+        height: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .image-object img {
-        height: auto;
-        max-height: 100%;
         max-width: 100%;
+        max-height: calc(100% - 4.5rem);
+        width: auto;
+        height: auto;
+    }
+
+    .image-caption {
+        display: block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.35;
+        text-align: center;
+        color: #fbf7ef;
     }
 
     .fixed-spacer {
@@ -145,7 +188,9 @@
 
     .scroll-hint {
         right: 1rem;
-        top: calc(35% - 1rem);
+        bottom: 1rem;
+        top: auto;
+        transform: none;
         font-size: 0.9rem;
     }
 }
