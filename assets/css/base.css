@@ -84,12 +84,40 @@ body {
 
 .sidebar-bottom {
     margin-top: auto;
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+    padding-left: 1rem;
 }
 
-.sidebar p.contact {
-    font-size: 1.2rem;
+.sidebar-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    transition: opacity 0.3s ease;
 }
 
+.sidebar-icon-link:hover {
+    opacity: 0.5;
+}
+
+.email-icon,
+.instagram-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.mobile-nav-divider,
+.mobile-icon-link {
+    display: none;
+}
 
 /***** main *****/
 
@@ -161,6 +189,47 @@ body {
 
     .sidebar li a {
         margin-left: 0;
+    }
+
+    .mobile-nav-divider,
+    .mobile-icon-link {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .mobile-nav-divider {
+        display: inline-block;
+        width: 1px;
+        height: 1em;
+        background: #d8cdbb;
+        margin: 0 0.15rem;
+    }
+
+    .mobile-icon-link a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #333333;
+    }
+
+    .email-icon,
+    .instagram-icon {
+        width: 1.05rem;
+        height: 1.05rem;
+        display: block;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .mobile-icon-link a:hover {
+        opacity: 0.5;
     }
 
     .content {
